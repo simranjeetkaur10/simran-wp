@@ -1,0 +1,91 @@
+#wp-sim-tic-tac-toe-game {
+  
+  width: 243px;
+  border: 2px solid #aaa;
+  display: grid;
+  background: url("https://media.istockphoto.com/photos/white-texture-watercolor-paper-picture-id621348814?b=1&k=20&m=621348814&s=170667a&w=0&h=UdbG1RcWSs2GyjiSjcwSp6vkYUQe88Akgb_-G-M1qAo=");
+  grid-template-columns: repeat(3, auto);
+
+    background-size: contain;
+}
+
+.wp-sim-tic-tac-toe-grid-cell {
+  border: 1px solid #000;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+}
+
+.wp-sim-tic-tac-toe-grid-cell:not(.disabled):hover {
+  background: rgb(222, 255, 206);
+  opacity:0.5;
+}
+
+.wp-sim-tic-tac-toe-grid-cell:nth-child(-n + 3) {
+  border-top: none;
+}
+
+.wp-sim-tic-tac-toe-grid-cell:nth-child(3n + 1) {
+  border-left: none;
+}
+
+.wp-sim-tic-tac-toe-grid-cell:nth-child(3n + 3) {
+  border-right: none;
+}
+
+.wp-sim-tic-tac-toe-grid-cell:nth-last-of-type(-n + 3) {
+  border-bottom: none;
+}
+
+.wp-sim-tic-tac-toe-disabled {
+  cursor: not-allowed;
+}
+
+.wp-sim-tic-tac-toe-x::after {
+  content: '❌';
+}
+
+.wp-sim-tic-tac-toe-o::after {
+  content: '⭕';
+}
+
+.wp-sim-tic-tac-toe-game-over {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: rgb(0 0 0 / 50%) 0 0 0 9999px;
+}
+
+.wp-sim-tic-tac-toe-game-over-text {
+  position: absolute;
+  top: -200px;
+  font-size: 60px;
+  color: #e0be0e;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: center;
+  transform: translateX(-15%);
+}
+
+.wp-sim-tic-tac-toe-visible {
+  display: block;
+}
+.wp-sim-tic-tac-toe-restart{
+  border: 1px solid black !important;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+
