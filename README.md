@@ -1,1 +1,1 @@
-# simran-wp
+This is a practice repository!
